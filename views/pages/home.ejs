@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("../partials/header") %>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-5">
+    <h1 class="text-3xl font-bold text-center mb-5">Pokédex</h1>
+
+    <!-- 🔍 Search Form -->
+    <form action="/search" method="GET" class="flex justify-center mb-5">
+      <input type="text" name="name" placeholder="Search Pokémon..." class="px-4 py-2 border rounded-l-lg focus:outline-none">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg">Search</button>
+    </form>
+
+    <!-- Pokémon List -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <% pokemonList.forEach(pokemon => { %>
+          <a href="/pokemon/<%= pokemon.name %>" class="p-4 bg-white shadow rounded-lg text-center hover:shadow-xl">
+            <img
+              src="<%= pokemon.sprites.front_default %>"
+              alt="<%= pokemon.name %>"
+              class="w-40 h-40 mx-auto"
+            />
+            <p class="text-xl capitalize font-semibold mt-2"><%= pokemon.name %></p>
+          </a>
+        <% }); %>
+      </div>
+      
+  </div>
+  <%- include("../partials/footer") %>
+</body>
+</html>
