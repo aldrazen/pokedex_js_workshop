@@ -18,7 +18,7 @@ const API_URL = process.env.API_URL;
 // })
 router.get("/", async (req, res) => {
   try {
-    const response = await axios.get(`${API_URL}?limit=50`); // Fixed typo: "Limit" -> "limit"
+    const response = await axios.get(`${API_URL}?limit=40`); // Fixed typo: "Limit" -> "limit"
 
     // Fetch full details for each Pokémon
     const pokemonList = await Promise.all(
