@@ -1,51 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
 
 body {
-    text-align: center;
-    background: linear-gradient(to bottom, #6ab7f5, rgb(107, 220, 69) ) ;
-    min-height: 100vh;
-
+  text-align: center;
+  background: linear-gradient(to bottom, #6ab7f5, rgb(107, 220, 69));
+  min-height: 100vh;
 }
 .container {
-    display: inline-block;
-    margin-top: 2%;
-    padding: 15px;
-    position: relative;
+  display: inline-block;
+  margin-top: 2%;
+  padding: 15px;
+  position: relative;
 }
-.pokemon_image{
-     position: absolute;
-     bottom: 50%;
-     left: 50%;
-     transform: translate(-63%, -10%);
-     height: 18%;
+.pokemon_image {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-63%, -10%);
+  height: 18%;
 }
 .pokedex {
-    width: 100%;
-    max-width: 425px;   
+  width: 100%;
+  max-width: 425px;
 }
-.pokemon_data{
-    position: absolute;
-    bottom: 37%;
-    top: 55;
-    right: 43%;
+.pokemon_data {
+  position: absolute;
+  bottom: 37%;
+  left: 50%;
 }
-.button{
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-63%, -10%);
+.button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-63%, -10%);
 }
 .more_details {
-    position: absolute;
-    bottom: 120px; 
-    left: 50%;
-    transform: translateX(-55%);
-    background-color: #f4f4f4;
-    text-align: start;
-    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333 ;
-    font-size: 16px;
-    color: #3a444d;
-    font-weight:bold;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-55%);
+  background-color: #f4f4f4;
+  text-align: start;
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+  font-size: 16px;
+  color: #3a444d;
 }
 
+@media (max-width: 768px) {
+  .pokemon_data {
+    font-size: 1.2rem;
+    top: 55%;
+  }
 
+  .more_details {
+    font-size: 0.9rem;
+    bottom: 18%;
+  }
+}
