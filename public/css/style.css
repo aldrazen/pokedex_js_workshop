@@ -26,8 +26,7 @@ body {
   position: absolute;
   bottom: 37%;
   left: 50%;
-  transform: translate(-10%, -10%);
-
+  transform: translate(-40%, -10%);
 }
 .button {
   position: absolute;
